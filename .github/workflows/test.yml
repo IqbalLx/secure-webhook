@@ -1,6 +1,7 @@
 name: Test
 
-on: [push]
+on:
+  workflow_dispatch:
 
 jobs:
   request:
@@ -14,6 +15,6 @@ jobs:
       - name: Request Postment Echo POST
         uses: ./
         with:
-          url: 'https://postman-echo.com/post'
+          url: "https://webhook.site/50adeabb-8e38-402a-9ad7-f08373fd953e"
           hmacSecret: '9aa66a8c37255ae2b71d82b1e4bffdb1'
           data: '{ "key": "value" }'
